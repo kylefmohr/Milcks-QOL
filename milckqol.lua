@@ -9,23 +9,23 @@ local keyupdate_ref = Controller.key_press_update
 function Controller.key_press_update(self, key, dt)
     keyupdate_ref(self, key, dt)
     keys_to_nums = {
-        ["1"] = 1,
-        ["2"] = 2,
-        ["3"] = 3,
-        ["4"] = 4,
-        ["5"] = 9,
-        ["q"] = 5,
-        ["w"] = 6,
-        ["e"] = 7,
-        ["r"] = 8,
-        ["t"] = 10
+        ["a"] = 1,
+        ["s"] = 2,
+        ["d"] = 3,
+        ["f"] = 4,
+        ["g"] = 9,
+        ["j"] = 5,
+        ["k"] = 6,
+        ["l"] = 7,
+        [";"] = 8,
+        ["h"] = 10
     }
     keys_to_ui = {
         ["z"] = "sort_value",
         ["x"] = "sort_rank",
-        ["return"] = "play_hand",
-        ["space"] = "discard_hand",
-        ["a"] = "run_info",
+        ["space"] = "play_hand",
+        ["`"] = "discard_hand",
+        ["tab"] = "run_info",
     }
     if G.STATE == G.STATES.SELECTING_HAND then
         if tableContains(keys_to_nums, key) then
